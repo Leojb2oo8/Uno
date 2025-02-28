@@ -1,25 +1,33 @@
-currentNameNum = 0;
+currentNameNum = 1;
 
 function randomInt(max, min = 1) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-class Room {
-    constructor(
-        initDoors = randomInt(4),
-    ) {
-        this.name = currentNameNum + 1;
-        currentNameNum++;
-    }
+function newRoom(){
+  numOfDoors = randomInt(4);
+  x = randomInt(4)
+  doorsLeft = numOfDoors;
+  if (doorsLeft == 0);{
+    leftPath = ["L", false, ""];
+    rightPath = ["R", false, ""];
+    topPath = ["T", false, ""];
+    bottomPath = ["B", false, ""];
+  }
+  elif (doorsLeft == 1);{
+    leftPath = ["L", false, ""];
+    rightPath = ["R", false, ""];
+    topPath = ["T", false, ""];
+    bottomPath = ["B", false, ""];
+  }
+  room = [currentNameNum, numOfDoors, leftPath, rightPath, topPath, bottomPath]
+  currentNameNum++
+  return room
 }
 
-startRoom = ["001", "4", ["L", true, new Room.roomlist], ["L", true, new Room.roomlist], ["L", true, new Room.roomlist], ["L", true, new Room.roomlist]];
+startRoom = [0, 4, ["L", true, newRoom()], ["R", true, newRoom()], ["T", true, newRoom()], ["B", true, newRoom()]];
 dungeon = [startRoom]
 console.log(dungeon)
-
-import { randomInt, born, randomTFWeight} from "../Utils/general.js";
-import { checkTreesForFood, getFood} from "../Utils/tree-util.js";
-import { checkCreaturesForFood } from "../Utils/creature-util.js";
 
 let currentNameNum = 0;
 export class Creature {
