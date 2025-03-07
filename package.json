@@ -1,0 +1,13 @@
+{
+    "name": "sims",
+    "version": "0.0.1",
+    "description": "",
+    "main": "./src",
+    "type": "module",
+    "scripts": {
+      "uno": "node ./src"
+    },
+    "author": "",
+    "license": "ISC"
+    
+  }
