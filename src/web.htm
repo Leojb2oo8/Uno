@@ -4,31 +4,47 @@
         <title>Sim</title>
         <style>
          body {
-         background-color: #e83131;
+            background-color: #e83131;
+            width: 1366px;
+            height: 784px;
+         }
+         h1{
+            color: black
          }
          .center{text-align: center}
          button {
-         cursor: pointer;
-         background-color: #ffd900;
-         border: none;
-         padding: 17px 20px;
-         font-size: 19px;
-         border-radius: 7px;
-         text-align: center;
-         transition-duration: 0.2s;
-         box-shadow: 0 7px #5c4e02;
+            cursor: pointer;
+            background-color: #ffd900;
+            border: none;
+            width: 390px;
+            height: 137px;
+            flex-shrink: 0;
+            font-size: 19px;
+            border-radius: 90px;
+            text-align: center;
+            transition-duration: 0.1s;
+            box-shadow: 0 7px #5c4e02;
          }
          button:hover {background-color: #ebc807}
          button:active {
-         background-color: #b39804;
-         box-shadow: 0 4px #5c4e02;
-         transform: translateY(4px);
+            background-color: #b39804;
+            box-shadow: 0 4px #5c4e02;
+            transform: translateY(4px);
          }
          hr {
-         background-color: black;
-         border: none;
-         height: 5px;
-         border-radius: 12px;
+            background-color: black;
+            border: none;
+            height: 5px;
+            border-radius: 12px;
+         }
+         .container{
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+            width: 90%;
+            height: 75px;
+            position:relative;
+            bottom: -400px;
          }
         </style>
 </head>
@@ -36,7 +52,12 @@
 <body>
 	<div class="center"><h1>Uno No Mercy</h1></div>
     <hr>
-    <div><button>Button</button></div>
+    <div class="container">
+        <div><button></button></div>
+        <div><button></button></div>
+        <div><button></button></div>
+    </div>
+    
 
 
 </body>
