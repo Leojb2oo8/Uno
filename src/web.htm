@@ -7,6 +7,7 @@
             background-color: #A13237;
             width: 1366px;
             height: 784px;
+            margin: 0 auto;
          }
          h1{
             color: black
@@ -28,12 +29,12 @@
             transform: translateY(4px);
          }
          .playButton{
-            background-color: #f5d840;
+            background-color: #fbd707;
             width: 390px;
             height: 137px;
             box-shadow: 0 7px #5c4e02;
         }
-         .playButton:hover {background-color: #ebc807}
+         .playButton:hover {background-color: #b19706}
          .playButton:active {box-shadow: 0 4px #5c4e02;}
 
          .optionsButton{
@@ -55,15 +56,26 @@
             border-radius: 12px;
          }
          .container{
+            /* padding: 30px; */
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            bottom: 200px;
+         }
+         .container>div{
             display: flex;
             justify-content: space-between;
-            margin: 0 auto;
-            width: 90%;
-            height: 137px;
-            padding: 30px 0;
-            position:relative;
-            bottom: -400px;
+            /* width: 100%; */
+            /* height: 137px; */
+            padding: 30px 100px;
          }
+         img{
+            text-align: center;
+            width: 50%;
+         }
+         
+         button:hover img{filter: brightness(0.6);}
         </style>
 </head>
 
@@ -71,9 +83,11 @@
 	<div class="center"><h1>Uno No Mercy</h1></div>
     <hr>
     <div class="container">
-        <div><button class="optionsButton"><img href="./Imgs/Options_Text.png" alt="Options"></button></div>
-        <div><button class="playButton"><img href="./Imgs/Play_Text.png" alt="Play"></button></div>
-        <div><button class="settingButton"><img href="./Imgs/Settings_Text.png" alt="Settings"></button></div>
+      <div>
+         <div><button class="optionsButton"><img src="./Imgs/Options_Text.png" alt="Options"></button></div>
+         <div><button class="playButton"><img src="./Imgs/Play_Text.png" alt="Play"></button></div>
+         <div><button class="settingButton"><img src="./Imgs/Settings_Text.png" alt="Settings"></button></div>
+      </div>
     </div>
     
 
