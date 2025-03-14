@@ -26,6 +26,16 @@
             box-shadow: 0 4px #5c4e02;
             transform: translateY(4px);
          }
+		 .backButton{
+			background-color: #d7d316;
+			box-shadow: 0 7px #5c4e02;
+			width: 100px;
+            height: 100px;
+			border-radius: 35px;
+		 }
+		 .backButton:hover {background-color: #ffff00}
+         .backButton:active {box-shadow: 0 4px #5c4e02;}
+		 
          .playButton{
             background-color: #d7d316;
             width: 390px;
@@ -49,21 +59,32 @@
 
 
          .singlePlayerButton{
+			margin: 0 50px;
+			width: 390px;
+            height: 137px;
             background-color: #48C2F9;
             box-shadow: 0 7px #0b2836;}
          .singlePlayerButton:hover {background-color: #00e5ff}
          .singlePlayerButton:active {box-shadow: 0 4px #0b2836}
 
          .onlineGameButton{
+			margin: 0 50px;
+			width: 390px;
+            height: 137px;
             background-color: #92FF28;
             box-shadow: 0 7px #203707;}
          .onlineGameButton:hover {background-color: #3cff00}
          .onlineGameButton:active {box-shadow: 0 4px #203707}
-
+		 
+		 .backButtonContainer{
+			top: 2%;
+			right: 1%;
+			position: fixed;
+		 }
+		 
          .container{
             width: 100%;
             position: fixed;
-            bottom: 0;
             left: 0;
             bottom: 150px;
          }
@@ -72,6 +93,8 @@
             justify-content: space-between;
             padding: 30px 100px;
          }
+		 
+
          img{
             text-align: center;
             width: 70%;
@@ -98,33 +121,52 @@
          function play(){
             menuButtons = document.getElementById("menuButtons")
             gameModeButtons = document.getElementById("gameModeButtons")
+			backButton = document.getElementById("backButton")
 
             menuButtons.classList.add("hide");
             gameModeButtons.classList.remove("hide");
-
-            
+			backButton.classList.remove("hide");
             
             logo = document.getElementById("logo")
             logo.style.width = "25%";
             logo.style.height = "25%";
          }
+		 
+		 function backToMM(){
+            menuButtons = document.getElementById("menuButtons")
+            gameModeButtons = document.getElementById("gameModeButtons")
+			backButton = document.getElementById("backButton")
+
+            menuButtons.classList.remove("hide");
+            gameModeButtons.classList.add("hide");
+			backButton.classList.add("hide");
+            
+            logo = document.getElementById("logo")
+            logo.style.width = "35%";
+            logo.style.height = "35%";
+         }
         </script>
 </head>
 
 <body>
+	<div id="backButton" class="backButtonContainer hide">
+		<div><button class="backButton" onclick="backToMM()"><img src="./Imgs/Undo_Arrow.png" alt="Back"></button></div>
+	</div>
+	
 	<div class="center"><img id="logo" class="logo" src="./Imgs/Uno_Logo.png" alt="Uno No Mercy Logo"></div> 
-   <div id="menuButtons" class="container">
+	
+    <div id="menuButtons" class="container">
       <div>
-         <div><button id="settings" class="optionsButton" ><img src="./Imgs/Options_Text.png" alt="Options"></button></div>
-         <div><button id="play" class="playButton" onclick="play()"><img src="./Imgs/Play_Text.png" alt="Play"></button></div>
-         <div><button id="options" class="settingButton"><img src="./Imgs/Settings_Text.png" alt="Settings"></button></div>
+         <div><button class="optionsButton" ><img src="./Imgs/Options_Text.png" alt="Options"></button></div>
+         <div><button class="playButton" onclick="play()"><img src="./Imgs/Play_Text.png" alt="Play"></button></div>
+         <div><button class="settingButton"><img src="./Imgs/Settings_Text.png" alt="Settings"></button></div>
       </div>
     </div>
-
+	
     <div id="gameModeButtons" class="container hide">
       <div>
-         <div><button id="settings" class="singlePlayerButton" ><img src="./Imgs/Single_Player_Text.png" alt="Single Player"></button></div>
-         <div><button id="settings" class="onlineGameButton" ><img src="./Imgs/Online_Game_Text.png" alt="Online Game"></button></div>
+         <div><button class="singlePlayerButton" ><img src="./Imgs/Single_Player_Text.png" alt="Single Player"></button></div>
+         <div><button class="onlineGameButton" ><img src="./Imgs/Online_Game_Text.png" alt="Online Game"></button></div>
       </div>
     </div>
     
