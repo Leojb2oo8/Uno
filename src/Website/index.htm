@@ -12,7 +12,9 @@
          h1{
             color: black
          }
-         .center{text-align: center}
+         .center{
+            text-align: center;
+            position: fixed;}
          button {
             cursor: pointer;
             border: none;
@@ -74,17 +76,37 @@
 		 .logo{
 		 width: 35%;
 		 height: 35%;
+
 		 }
+
+       .hide{
+         display: none;
+       }
+
         </style>
+
+        <script>
+         function play(){
+            playButton = document.getElementById("play")
+            settingsButton = document.getElementById("settings")
+            optionsButton = document.getElementById("options")
+            // logo = document.getElementsByClassName("logo")
+            // logo.style.width = "25%";
+            // logo.style.height = "25%";
+            settingsButton.classList.add("hide");
+            optionsButton.classList.add("hide");
+            playButton.classList.add("hide");
+         }
+        </script>
 </head>
 
 <body>
-	<div class="center"><h1><img class="logo" src="./Imgs/logo.png" alt="Uno No Mercy Logo"></h1></div>
+	<div class="center"><img class="logo" src="./Imgs/Uno_Logo.png" alt="Uno No Mercy Logo"></div>
     <div class="container">
       <div>
-         <div><button class="optionsButton"><img src="./Imgs/Options_Text.png" alt="Options"></button></div>
-         <div><button class="playButton"><img src="./Imgs/Play_Text.png" alt="Play"></button></div>
-         <div><button class="settingButton"><img src="./Imgs/Settings_Text.png" alt="Settings"></button></div>
+         <div><button id="settings" class="optionsButton" ><img src="./Imgs/Options_Text.png" alt="Options"></button></div>
+         <div><button id="play" class="playButton" onclick="play()"><img src="./Imgs/Play_Text.png" alt="Play"></button></div>
+         <div><button id="options" class="settingButton"><img src="./Imgs/Settings_Text.png" alt="Settings"></button></div>
       </div>
     </div>
     
