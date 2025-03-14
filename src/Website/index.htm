@@ -51,6 +51,19 @@
          .settingButton:hover {background-color: #72ba24}
          .settingButton:active {box-shadow: 0 4px #21310f}
 
+
+         .singlePlayerButton{
+            background-color: #48C2F9;
+            box-shadow: 0 7px #0b2836;}
+         .singlePlayerButton:hover {background-color: #00e5ff}
+         .singlePlayerButton:active {box-shadow: 0 4px #0b2836}
+
+         .onlineGameButton{
+            background-color: #92FF28;
+            box-shadow: 0 7px #203707;}
+         .onlineGameButton:hover {background-color: #3cff00}
+         .onlineGameButton:active {box-shadow: 0 4px #203707}
+
          .container{
             width: 100%;
             position: fixed;
@@ -87,26 +100,35 @@
 
         <script>
          function play(){
-            playButton = document.getElementById("play")
-            settingsButton = document.getElementById("settings")
-            optionsButton = document.getElementById("options")
+            menuButtons = document.getElementById("menuButtons")
+            gameModeButtons = document.getElementById("gameModeButtons")
+
+            menuButtons.classList.add("hide");
+            gameModeButtons.classList.remove("hide");
+
+            
+            
             // logo = document.getElementsByClassName("logo")
             // logo.style.width = "25%";
             // logo.style.height = "25%";
-            settingsButton.classList.add("hide");
-            optionsButton.classList.add("hide");
-            playButton.classList.add("hide");
          }
         </script>
 </head>
 
 <body>
-	<div class="center"><img class="logo" src="./Imgs/Uno_Logo.png" alt="Uno No Mercy Logo"></div>
-    <div class="container">
+	<div class="center"><h1><img class="logo" src="./Imgs/Uno_Logo.png" alt="Uno No Mercy Logo"></h1></div> 
+   <div id="menuButtons" class="container">
       <div>
          <div><button id="settings" class="optionsButton" ><img src="./Imgs/Options_Text.png" alt="Options"></button></div>
          <div><button id="play" class="playButton" onclick="play()"><img src="./Imgs/Play_Text.png" alt="Play"></button></div>
          <div><button id="options" class="settingButton"><img src="./Imgs/Settings_Text.png" alt="Settings"></button></div>
+      </div>
+    </div>
+
+    <div id="gameModeButtons" class="container hide">
+      <div>
+         <div><button id="settings" class="singlePlayerButton" ><img src="./Imgs/Single_Player_Text.png" alt="Single Player"></button></div>
+         <div><button id="settings" class="onlineGameButton" ><img src="./Imgs/Online_Game_Text.png" alt="Online Game"></button></div>
       </div>
     </div>
     
