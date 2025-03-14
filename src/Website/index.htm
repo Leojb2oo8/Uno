@@ -9,12 +9,7 @@
             height: 784px;
             margin: 0 auto;
          }
-         h1{
-            color: black
-         }
-         .center{
-            text-align: center;
-            position: fixed;}
+         .center{text-align: center;}
          button {
             cursor: pointer;
             border: none;
@@ -86,15 +81,15 @@
 
          button:hover img{filter: brightness(1.2);}
 		 
-		 .logo{
-		 width: 35%;
-		 height: 35%;
+         .logo{
+         width: 35%;
+         height: 35%;
 
-		 }
+         }
 
-       .hide{
-         display: none;
-       }
+         .hide{
+            display: none;
+         }
 
         </style>
 
@@ -108,15 +103,15 @@
 
             
             
-            // logo = document.getElementsByClassName("logo")
-            // logo.style.width = "25%";
-            // logo.style.height = "25%";
+            logo = document.getElementById("logo")
+            logo.style.width = "25%";
+            logo.style.height = "25%";
          }
         </script>
 </head>
 
 <body>
-	<div class="center"><h1><img class="logo" src="./Imgs/Uno_Logo.png" alt="Uno No Mercy Logo"></h1></div> 
+	<div class="center"><img id="logo" class="logo" src="./Imgs/Uno_Logo.png" alt="Uno No Mercy Logo"></div> 
    <div id="menuButtons" class="container">
       <div>
          <div><button id="settings" class="optionsButton" ><img src="./Imgs/Options_Text.png" alt="Options"></button></div>
