@@ -49,18 +49,12 @@
          .settingButton:hover {background-color: #72ba24}
          .settingButton:active {box-shadow: 0 4px #21310f}
 
-         hr {
-            background-color: black;
-            border: none;
-            height: 5px;
-            border-radius: 12px;
-         }
          .container{
             width: 100%;
             position: fixed;
             bottom: 0;
             left: 0;
-            bottom: 200px;
+            bottom: 150px;
          }
          .container>div{
             display: flex;
@@ -76,12 +70,16 @@
          }
 
          button:hover img{filter: brightness(1.2);}
+		 
+		 .logo{
+		 width: 35%;
+		 height: 35%;
+		 }
         </style>
 </head>
 
 <body>
-	<div class="center"><h1>Uno No Mercy</h1></div>
-    <hr>
+	<div class="center"><h1><img class="logo" src="./Imgs/logo.png" alt="Uno No Mercy Logo"></h1></div>
     <div class="container">
       <div>
          <div><button class="optionsButton"><img src="./Imgs/Options_Text.png" alt="Options"></button></div>
