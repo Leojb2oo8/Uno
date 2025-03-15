@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Sim</title>
+        <title>Uno No Mercy</title>
         <style>
          html, body {margin: 0; height: 100%; overflow: hidden}
          body {
@@ -121,30 +121,32 @@
          function play(){
             menuButtons = document.getElementById("menuButtons")
             gameModeButtons = document.getElementById("gameModeButtons")
-			backButton = document.getElementById("backButton")
+			   backButton = document.getElementById("backButton")
 
             menuButtons.classList.add("hide");
             gameModeButtons.classList.remove("hide");
-			backButton.classList.remove("hide");
+			   backButton.classList.remove("hide");
             
             logo = document.getElementById("logo")
             logo.style.width = "25%";
             logo.style.height = "25%";
          }
 		 
-		 function backToMM(){
-            menuButtons = document.getElementById("menuButtons")
-            gameModeButtons = document.getElementById("gameModeButtons")
-			backButton = document.getElementById("backButton")
+         function backToMM(){
+               menuButtons = document.getElementById("menuButtons")
+               gameModeButtons = document.getElementById("gameModeButtons")
+               backButton = document.getElementById("backButton")
 
-            menuButtons.classList.remove("hide");
-            gameModeButtons.classList.add("hide");
-			backButton.classList.add("hide");
+               menuButtons.classList.remove("hide");
+               gameModeButtons.classList.add("hide");
+               backButton.classList.add("hide");
+               
+               logo = document.getElementById("logo")
+               logo.style.width = "35%";
+               logo.style.height = "35%";
+            }
+         
             
-            logo = document.getElementById("logo")
-            logo.style.width = "35%";
-            logo.style.height = "35%";
-         }
         </script>
 </head>
 
