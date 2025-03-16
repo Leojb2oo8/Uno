@@ -130,7 +130,7 @@
         padding: 30px 100px;
       }
 
-      img {
+      .menuImgs {
         text-align: center;
         width: 70%;
       }
@@ -173,12 +173,23 @@
 
       .unoBoardCard {
          border-radius: 10%;
-         width: 60%;
+         width: 100%;
+      }
+
+      .unoBoardCardParent {
+         padding: 5%;
+         width: 12.5vh;
       }
 
       .unoHandCard {
          position: absolute;
          bottom: 75px;
+         width: 12.5vh;
+      }
+      .unoHandCard:hover {
+         position: absolute;
+         bottom: 90px;
+         filter: brightness(1.75);
       }
 
       .hide {
@@ -232,7 +243,16 @@
 
   <body>
     <div id="gameBoard" class="hide" style="position: absolute;">
-      <div class="parentGameMatt center"><div class="gameMatt center"><div class="center"><img class="unoBoardCard" src="./Imgs/Cards/Green/0.png"></div><div class="unoBoardCardParent center"><img class="unoBoardCard" src="./Imgs/Cards/Red/$.png"></div></div></div>
+      <div class="parentGameMatt center">
+         <div class="gameMatt center">
+            <div class="unoBoardCardParent center">
+               <img class="unoBoardCard" src="./Imgs/Cards/Green/0.png">
+            </div>
+            <div class="unoBoardCardParent center">
+               <img class="unoBoardCard" src="./Imgs/Cards/Red/$.png">
+            </div>
+         </div>
+      </div>
       
       <div class="center playerMattAligned"><div class="playerMatt center">
          <div class="center unoHandCard" style="left: 100px;"><img class="unoBoardCard" src="./Imgs/Cards/Green/0.png"></div>
@@ -244,7 +264,7 @@
     <div id="backButton" class="backButtonContainer hide">
       <div style="text-align: right;">
         <button class="backButton" onclick="backToMM()">
-          <img src="./Imgs/Undo_Arrow.png" alt="Back" />
+          <img class="menuImgs" src="./Imgs/Undo_Arrow.png" alt="Back" />
         </button>
       </div>
     </div>
@@ -256,17 +276,17 @@
       <div>
         <div>
           <button class="optionsButton">
-            <img src="./Imgs/Options_Text.png" alt="Options" />
+            <img class="menuImgs" src="./Imgs/Options_Text.png" alt="Options" />
           </button>
         </div>
         <div>
           <button class="playButton" onclick="gameMenu()">
-            <img src="./Imgs/Play_Text.png" alt="Play" />
+            <img class="menuImgs" src="./Imgs/Play_Text.png" alt="Play" />
           </button>
         </div>
         <div>
           <button class="settingButton">
-            <img src="./Imgs/Settings_Text.png" alt="Settings" />
+            <img class="menuImgs" src="./Imgs/Settings_Text.png" alt="Settings" />
           </button>
         </div>
       </div>
@@ -276,12 +296,12 @@
       <div>
         <div>
           <button class="singlePlayerButton" onclick="game()">
-            <img src="./Imgs/Single_Player_Text.png" alt="Single Player" />
+            <img class="menuImgs" src="./Imgs/Single_Player_Text.png" alt="Single Player" />
           </button>
         </div>
         <div>
           <button class="onlineGameButton" onclick="game()">
-            <img src="./Imgs/Online_Game_Text.png" alt="Online Game" />
+            <img class="menuImgs" src="./Imgs/Online_Game_Text.png" alt="Online Game" />
           </button>
         </div>
       </div>
