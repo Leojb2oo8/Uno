@@ -53,6 +53,20 @@
       .backButton:active {
         box-shadow: 0 4px #5c4e02;
       }
+	  
+	  .unoButton {
+        background-color: #9a2d9c;
+        box-shadow: 0 7px #712073;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+      }
+      .unoButton:hover {
+        background-color: #c94bcc;
+      }
+      .unoButton:active {
+        box-shadow: 0 4px #712073;
+      }
 
       .playButton {
         background-color: #d7d316;
@@ -120,6 +134,12 @@
       .backButtonContainer {
         top: 2%;
         right: 1%;
+        position: fixed;
+      }
+	  
+	  .unoButtonContainer {
+        top: 80%;
+        right: 15%;
         position: fixed;
       }
 
@@ -201,6 +221,7 @@
          bottom: 90px;
          filter: brightness(1.75);
       }
+	  
 
       .hide {
         display: none;
@@ -269,6 +290,15 @@
          <div class="center unoHandCard" style="left: 450px;"><img class="unoBoardCard" src="./Imgs/Cards/Green/0.png"></div>
          <div class="center unoHandCard" style="left: 500px;"><img class="unoBoardCard" src="./Imgs/Cards/Green/0.png"></div>
       </div></div>
+	  
+	  <div class="unoButtonContainer">
+		  <div style="text-align: right;">
+			<button class="unoButton" onclick="">
+			  <img class="menuImgs" src="./Imgs/UNO_Button_Text.png" alt="Back" />
+			</button>
+		  </div>
+	  </div>
+	
     </div>
 
     <div id="backButton" class="backButtonContainer hide">
